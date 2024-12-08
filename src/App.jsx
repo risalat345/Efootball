@@ -1,69 +1,81 @@
-import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Steam from './components/Steam'
-import Profile from './components/Profile'
-import GroupA from './components/GroupA'
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Steam from "./components/Steam";
+import Profile from "./components/Profile";
+import GroupA from "./components/GroupA";
+// Import additional components like Navbar when ready
+// import Navbar from "./components/Navbar";
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/Efootball",
-      element: <>
-        {/* <Navbar />
-        <Login /> */}
-        {/* <Tournament/> */}
-        <Steam/>
-      </>
+      path: "/Efootball", // Adjust base path for GitHub Pages
+      element: (
+        <>
+          {/* Uncomment Navbar if applicable */}
+          {/* <Navbar /> */}
+          <Steam />
+        </>
+      ),
     },
     {
-      path: "/profile",
-      element: <>
-        {/* <Navbar />
-        <Login /> */}
-        {/* <Tournament/> */}
-        <Profile/>
-      </>
+      path: "/Efootball/profile", // Include base path
+      element: (
+        <>
+          {/* <Navbar /> */}
+          <Profile />
+        </>
+      ),
     },
     {
-      path: "/groupa",
-      element: <>
-        {/* <Navbar /> */}
-        <GroupA />
-      </>
+      path: "/Efootball/groupa", // Include base path
+      element: (
+        <>
+          {/* <Navbar /> */}
+          <GroupA />
+        </>
+      ),
     },
+    // Uncomment and add other routes as needed
     // {
-    //   path: "/home",
-    //   element: <>
-    //     <Navbar />
-    //     <Home />
-    //   </>
+    //   path: "/Efootball/home",
+    //   element: (
+    //     <>
+    //       <Navbar />
+    //       <Home />
+    //     </>
+    //   ),
     // },
     // {
-    //   path: "/schedule",
-    //   element: <>
-    //     <Navbar />
-    //     <Schedule />
-    //   </>
+    //   path: "/Efootball/schedule",
+    //   element: (
+    //     <>
+    //       <Navbar />
+    //       <Schedule />
+    //     </>
+    //   ),
     // },
     // {
-    //   path:"/pointtable",
-    //   element:<>
-    // <Navbar /><PointTable/>
-    // </>
+    //   path: "/Efootball/pointtable",
+    //   element: (
+    //     <>
+    //       <Navbar />
+    //       <PointTable />
+    //     </>
+    //   ),
     // },
     // {
-    //   path:"/report",
-    //   element:<>
-    // <Navbar /><Report/>
-    // </>
+    //   path: "/Efootball/report",
+    //   element: (
+    //     <>
+    //       <Navbar />
+    //       <Report />
+    //     </>
+    //   ),
     // },
-  ])
+  ]);
 
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
