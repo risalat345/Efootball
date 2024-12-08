@@ -1,0 +1,93 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.image-container img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.App input{
+  width:60vw;
+  border-radius: 1rem;
+}
+.App button{
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 0.3rem 5rem;
+  border-radius: 0.5rem ;
+  margin: 2rem 0;
+}
+.image-container img:hover{
+  border: 2px solid yellow;
+}
+body{
+  background-color: darkblue;
+  color: white;
+}
+table, th, td {
+  color: wheat;
+  border: 1px solid black;
+  font-weight: bold;
+}
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+tr{
+  width: fit-content;
+}
+#delete{
+  padding:0.5rem 2rem;
+}
+/* In App.css */
+th {
+  background-color:black;
+  color: white;
+}
+
+.image-container img.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
