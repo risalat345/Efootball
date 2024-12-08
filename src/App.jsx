@@ -7,7 +7,7 @@ import GroupA from './components/GroupA'
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/Efootball",
+      path: "/",
       element: <>
         {/* <Navbar />
         <Login /> */}
