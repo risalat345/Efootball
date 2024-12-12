@@ -39,11 +39,11 @@ function Profile() {
       
      
      <div className="flex flex-wrap gap-14" >
-     <div className='h-[150px] w-5/12 border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
+     <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
 
 <NavLink to="/groupa">
-      <div className=" flex justify-between p-5">
+      <div className=" flex w-[340px] justify-between p-5">
   
         <img src={ManchesterCity.src} alt={ManchesterCity.alt} style={{ width: '50px' }} />
         <img src={Arsenal.src} alt={Arsenal.alt} style={{ width: '45px' }} />
@@ -52,9 +52,9 @@ function Profile() {
         </div>
         </NavLink>
       </div>
-     <div className='h-[150px] w-5/12 border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
+     <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
-      <div className=" flex justify-between p-5">
+      <div className=" flex justify-between p-5 w-[340px]">
 
         <img src={FCBarcelona.src} alt={FCBarcelona.alt} style={{ width: '50px' }} />
         <img src={Chelsea.src} alt={Chelsea.alt} style={{ width: '45px' }} />
@@ -62,9 +62,9 @@ function Profile() {
         <img src={AlRiyadh.src} alt={AlRiyadh.alt} style={{ width: '45px' }} />
         </div>
       </div>
-     <div className='h-[150px] w-5/12 border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
+     <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
-      <div className=" flex justify-between p-5">
+      <div className=" flex justify-between p-5 w-[340px]">
   
         <img src={RBLeipzig.src} alt={RBLeipzig.alt} style={{ width: '50px' }} />
         <img src={ManchesterUnited.src} alt={ManchesterUnited.alt} style={{ width: '60px' }} />
@@ -72,9 +72,9 @@ function Profile() {
         <img src={AlHilal.src} alt={AlHilal.alt} style={{ width: '50px' }} />
         </div>
       </div>
-     <div className='h-[150px] w-5/12 border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
+     <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
-      <div className=" flex justify-between p-5">
+      <div className=" flex justify-between p-5 w-[340px]">
   
         <img src={RealMadrid.src} alt={RealMadrid.alt} style={{ width: '50px' }} />
         <img src={RealBetis.src} alt={RealBetis.alt} style={{ width: '45px' }} />
@@ -82,9 +82,9 @@ function Profile() {
         <img src={GironaFC.src} alt={GironaFC.alt} style={{ width: '60px' }} />
         </div>
       </div>
-     <div className='h-[150px] w-5/12 border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
+     <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
-      <div className=" flex justify-between p-5">
+      <div className=" flex justify-between p-5 w-[340px]">
       <img src={CelticGlasgow.src} alt={CelticGlasgow.alt} style={{ width: '50px' }} />
         <img src={AlNassr.src} alt={AlNassr.alt} style={{ width: '50px' }} />
        
@@ -92,9 +92,9 @@ function Profile() {
         <img src={ACMilan.src} alt={ACMilan.alt} style={{ width: '45px' }} />
         </div>
       </div>
-     <div className='h-[150px] w-5/12 border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
+     <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
-      <div className=" flex justify-between p-5">
+      <div className=" flex justify-between p-5 w-[340px]">
   
         <img src={InterMiami.src} alt={InterMiami.alt} style={{ width: '60px' }} />
         <img src={RealSociedad.src} alt={RealSociedad.alt} style={{ width: '45px' }} />
@@ -102,9 +102,9 @@ function Profile() {
         <img src={BayerLeverkusen.src} alt={BayerLeverkusen.alt} style={{ width: '45px' }} />
         </div>
       </div>
-     <div className='h-[150px] w-5/12 border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
+     <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
-      <div className=" flex justify-between p-5">
+      <div className=" flex justify-between p-5 w-[340px]">
   
         <img src={InterMilan.src} alt={InterMilan.alt} style={{ width: '50px' }} />
         <img src={BayernMunich.src} alt={BayernMunich.alt} style={{ width: '50px' }} />
@@ -112,9 +112,9 @@ function Profile() {
         <img src={PSG.src} alt={PSG.alt} style={{ width: '50px' }} />
         </div>
       </div>
-     <div className='h-[150px] w-5/12 border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
+     <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
-      <div className=" flex justify-between p-5">
+      <div className=" flex justify-between p-5 w-[340px]">
       <img src={OsasunaFC.src} alt={OsasunaFC.alt} style={{ width: '50px' }} />
       <img src={NewcastleUnited.src} alt={NewcastleUnited.alt} style={{ width: '45px' }} />
  

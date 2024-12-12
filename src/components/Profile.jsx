@@ -5,7 +5,7 @@ import GroupInfo from "./GroupInfo"
 const Profile = () => {
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
     <TeamInfo/>
   <GroupInfo/>
     </>

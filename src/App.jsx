@@ -3,11 +3,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Steam from './components/Steam'
 import Profile from './components/Profile'
 import GroupA from './components/GroupA'
-
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/Efootball",
       element: <>
         {/* <Navbar />
         <Login /> */}

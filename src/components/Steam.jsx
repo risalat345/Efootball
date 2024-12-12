@@ -96,21 +96,21 @@ function Steam() {
     <div>
       <div className="Steam flex flex-col gap-2 items-center mx-auto">
         <input
-          className="px-5 py-2 text-black font-bold w-6/12 rounded-lg"
+          className="px-5 py-2 text-black font-bold w-full md:w-6/12 rounded-lg"
           type="text"
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
           placeholder="Enter Your Name"
         />
         <input
-          className="px-5 py-2 text-black font-bold w-6/12 rounded-lg"
+          className="px-5 py-2 w-full text-black font-bold md:w-6/12 rounded-lg"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Enter a password"
         />
       </div>
-      <div className="image-container flex flex-wrap gap-5">
+      <div className="image-container flex flex-wrap gap-3 md:gap-5">
         {images.map((image) => (
           <img
             key={image.id}
@@ -135,7 +135,7 @@ function Steam() {
       <div id="selected-images">
         <h3 className="font-bold text-xl">Team Data</h3>
         {savedData.length > 0 ? (
-          <table>
+          <table className='text-[8px]'>
             <thead>
               <tr>
                 <th>Player Name</th>
@@ -148,9 +148,9 @@ function Steam() {
             <tbody>
               {savedData.map((data, index) => (
                 <tr key={index}>
-                  <td>{data.text}</td>
+                  <td className='text-[10px]'>{data.text}</td>
                   <td className='flex justify-center'>
-                    <img src={data.image.src} alt={data.image.alt} style={{ width: '50px' }} />
+                    <img className='md:w-[50px] w-[20px]' src={data.image.src} alt={data.image.alt} />
                   </td>
                   <td>{data.image.name}</td>
                  

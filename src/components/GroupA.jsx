@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { images } from './Data';
-import Navbar from './Navbar';
-
 const ManchesterCity = images.find((img) => img.id === 1);
 const Arsenal = images.find((img) => img.id === 11);
 const UdineseCalcio = images.find((img) => img.id === 32);
@@ -184,14 +182,13 @@ const GroupA = () => {
 
   return (
     <>
-      <Navbar />
       <div className="relative md:hidden block w-full  flex-col justify-center items-center p-4 overflow-x-hidden md:overflow-none">
-       <div className='h-[180px] w-[350px] border border-yellow-300 rounded-lg p-4'>
+       <div className='h-[180px] w-[300px] border border-yellow-300 rounded-lg p-4'>
 <h1 className='font-mono text-2xl'>Group A</h1>
 <div className="team flex justify-around items-center mt-4">
   {teams.map((team) => (
     <div key={team.id} className="flex flex-col items-center">
-      <img src={team.src} alt={team.name} className="md:w-20 md:h-20 w-14 h-14 rounded-full" />
+      <img src={team.src} alt={team.name} className=" w-14 h-14 rounded-full" />
     </div>
   ))}
 </div>
