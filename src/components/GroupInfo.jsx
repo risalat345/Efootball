@@ -52,6 +52,7 @@ function Profile() {
         </div>
         </NavLink>
       </div>
+      <NavLink to="/groupb">
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
       <div className=" flex justify-between p-5 w-[340px]">
@@ -61,7 +62,9 @@ function Profile() {
         <img src={AjaxAmsterdam.src} alt={AjaxAmsterdam.alt} style={{ width: '50px' }} />
         <img src={AlRiyadh.src} alt={AlRiyadh.alt} style={{ width: '45px' }} />
         </div>
+       
       </div>
+      </NavLink>
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
       <div className=" flex justify-between p-5 w-[340px]">

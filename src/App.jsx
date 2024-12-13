@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Steam from './components/Steam'
 import Profile from './components/Profile'
 import GroupA from './components/GroupA'
+import GroupB from './components/GroupB'
 function App() {
   const router = createBrowserRouter([
     {
@@ -28,6 +29,12 @@ function App() {
       element: <>
         {/* <Navbar /> */}
         <GroupA />
+      </>
+    },
+    {
+      path: "/groupb",
+      element: <>
+        <GroupB/>
       </>
     },
     // {
