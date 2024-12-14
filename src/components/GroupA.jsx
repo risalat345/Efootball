@@ -185,12 +185,11 @@ const GroupA = () => {
       <div className="relative w-full  flex-col justify-center items-center p-4 overflow-x-hidden md:overflow-none">
        <div className='h-[180px] w-[300px] border border-yellow-300 rounded-lg p-4'>
 <h1 className='font-mono text-2xl'>Group A</h1>
-<div className="team flex justify-around items-center mt-4">
-  {teams.map((team) => (
-    <div key={team.id} className="flex flex-col items-center">
-      <img src={team.src} alt={team.name} className=" w-14 h-14 rounded-full" />
-    </div>
-  ))}
+<div className="team flex gap-3 justify-around items-center mt-4">
+  <img className='w-[60px]' src={ManchesterCity.src}/>
+  <img className='w-[50px]' src={WestHamUnited.src}/>
+  <img className='w-[60px]' src={UdineseCalcio.src}/>
+  <img className='w-[50px]' src={Arsenal.src}/>
 </div>
        </div>
         <div className="mt-2 w-full max-w-3xl">
@@ -199,7 +198,7 @@ const GroupA = () => {
             {matches.map((match, index) => (
              <li
              key={index}
-             className={`flex md:w-screen w-[310px] items-center justify-between p-2 md:gap-4 md:p-4 rounded-lg bg-gradient-to-r shadow-lg transition-all transform ${
+             className={`flex w-[310px] items-center justify-between p-2 md:gap-4 md:p-4 rounded-lg bg-gradient-to-r shadow-lg transition-all transform ${
               isEditing[index] ? 'from-yellow-200 to-yellow-400' : 'from-green-300 to-green-500'
             }`}
            >
@@ -313,14 +312,14 @@ const GroupA = () => {
       </table>
     </div>
 
-    <div className="mt-52 text-center">
+    
       <button
         onClick={resetData}
-        className="px-6 py-2 bg-red-500 text-white font-semibold rounded-md"
+        className="px-6 hidden md:block py-2 bg-red-500 text-white font-semibold rounded-md"
       >
         Reset Scores
       </button>
-    </div>
+  
   </div>
 </>
 );

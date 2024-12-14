@@ -2,23 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { images } from './Data';
 
 // Fetching new team data
-const FcBarcelona = images.find((img) => img.id === 24); // Replace with actual ID
-const Chelsea = images.find((img) => img.id === 15); // Replace with actual ID
-const AlRiyadh = images.find((img) => img.id === 30); // Replace with actual ID
-const AjaxAmsterdam = images.find((img) => img.id === 17); // Replace with actual ID
+const RBLeipzig = images.find((img) => img.id === 27); // Replace with actual ID
+const ManchesterUnited = images.find((img) => img.id === 12); // Replace with actual ID
+const Liverpool = images.find((img) => img.id === 9); // Replace with actual ID
+const AlHilal = images.find((img) => img.id === 26); // Replace with actual ID
 
 const matches = [
-  { team1: FcBarcelona, team2: Chelsea },
-  { team1: AlRiyadh, team2: AjaxAmsterdam },
-  { team1: FcBarcelona, team2: AlRiyadh },
-  { team1: Chelsea, team2: AjaxAmsterdam },
-  { team1: FcBarcelona, team2: AjaxAmsterdam },
-  { team1: Chelsea, team2: AlRiyadh },
+  { team1: RBLeipzig, team2: ManchesterUnited },
+  { team1: Liverpool, team2: AlHilal },
+  { team1: RBLeipzig, team2: Liverpool },
+  { team1: ManchesterUnited, team2: AlHilal },
+  { team1: RBLeipzig, team2: AlHilal },
+  { team1: ManchesterUnited, team2: Liverpool },
 ];
 
 const PASSWORD = 'risalat34';
 
-const GroupB = () => {
+const GroupC = () => {
   const [scores, setScores] = useState(
     () => JSON.parse(localStorage.getItem('scoresB')) || matches.map(() => ({ team1Score: '', team2Score: '' }))
   );
@@ -30,8 +30,8 @@ const GroupB = () => {
   const [teams, setTeams] = useState(
     () => JSON.parse(localStorage.getItem('teamsB')) || [
       {
-        id: 24,
-        name: 'Fc Barcelona',
+        id: 31,
+        name: 'RB Leipzig',
         played: 0,
         won: 0,
         drawn: 0,
@@ -39,11 +39,11 @@ const GroupB = () => {
         goalsFor: 0,
         goalsAgainst: 0,
         points: 0,
-        src: FcBarcelona.src,
+        src: RBLeipzig.src,
       },
       {
-        id: 15,
-        name: 'Chelsea',
+        id: 32,
+        name: 'Manchester United',
         played: 0,
         won: 0,
         drawn: 0,
@@ -51,11 +51,11 @@ const GroupB = () => {
         goalsFor: 0,
         goalsAgainst: 0,
         points: 0,
-        src: Chelsea.src,
+        src: ManchesterUnited.src,
       },
       {
-        id: 30,
-        name: 'Al Riyadh',
+        id: 33,
+        name: 'Liverpool',
         played: 0,
         won: 0,
         drawn: 0,
@@ -63,11 +63,11 @@ const GroupB = () => {
         goalsFor: 0,
         goalsAgainst: 0,
         points: 0,
-        src: AlRiyadh.src,
+        src: Liverpool.src,
       },
       {
-        id: 17,
-        name: 'Ajax Amsterdam',
+        id: 34,
+        name: 'Al Hilal',
         played: 0,
         won: 0,
         drawn: 0,
@@ -75,7 +75,7 @@ const GroupB = () => {
         goalsFor: 0,
         goalsAgainst: 0,
         points: 0,
-        src: AjaxAmsterdam.src,
+        src: AlHilal.src,
       },
     ]
   );
@@ -190,10 +190,10 @@ const GroupB = () => {
 <h1 className='font-mono text-2xl'>Group B</h1>
 <div className="team flex justify-around items-center mt-4">
 
-<img width="50px" src={Chelsea.src} />
-<img width="50px" src={FcBarcelona.src} />
-<img width="50px" src={AjaxAmsterdam.src} />
-<img width="50px" src={AlRiyadh.src} />
+<img width="60px" src={RBLeipzig.src}/>
+<img width="60px" src={ManchesterUnited.src}/>
+<img width="40px" src={Liverpool.src}/>
+<img width="60px" src={AlHilal.src}/>
 </div>
      </div>
       <div className="mt-2 w-full max-w-3xl">
@@ -329,4 +329,4 @@ const GroupB = () => {
   );
 };
 
-export default GroupB;
+export default GroupC;

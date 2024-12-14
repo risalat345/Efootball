@@ -4,6 +4,7 @@ import Steam from './components/Steam'
 import Profile from './components/Profile'
 import GroupA from './components/GroupA'
 import GroupB from './components/GroupB'
+import GroupC from './components/GroupC'
 function App() {
   const router = createBrowserRouter([
     {
@@ -35,6 +36,12 @@ function App() {
       path: "/groupb",
       element: <>
         <GroupB/>
+      </>
+    },
+    {
+      path: "/groupc",
+      element: <>
+        <GroupC/>
       </>
     },
     // {

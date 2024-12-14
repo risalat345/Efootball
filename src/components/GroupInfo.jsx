@@ -54,7 +54,7 @@ function Profile() {
       </div>
       <NavLink to="/groupb">
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
-        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
+        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group B</div>
       <div className=" flex justify-between p-5 w-[340px]">
 
         <img src={FCBarcelona.src} alt={FCBarcelona.alt} style={{ width: '50px' }} />
@@ -65,8 +65,9 @@ function Profile() {
        
       </div>
       </NavLink>
+      <NavLink to="/groupc">
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
-        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
+        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group C</div>
       <div className=" flex justify-between p-5 w-[340px]">
   
         <img src={RBLeipzig.src} alt={RBLeipzig.alt} style={{ width: '50px' }} />
@@ -75,8 +76,9 @@ function Profile() {
         <img src={AlHilal.src} alt={AlHilal.alt} style={{ width: '50px' }} />
         </div>
       </div>
+      </NavLink>
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
-        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
+        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group D</div>
       <div className=" flex justify-between p-5 w-[340px]">
   
         <img src={RealMadrid.src} alt={RealMadrid.alt} style={{ width: '50px' }} />
@@ -86,7 +88,7 @@ function Profile() {
         </div>
       </div>
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
-        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
+        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group E</div>
       <div className=" flex justify-between p-5 w-[340px]">
       <img src={CelticGlasgow.src} alt={CelticGlasgow.alt} style={{ width: '50px' }} />
         <img src={AlNassr.src} alt={AlNassr.alt} style={{ width: '50px' }} />
@@ -96,7 +98,7 @@ function Profile() {
         </div>
       </div>
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
-        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
+        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group F</div>
       <div className=" flex justify-between p-5 w-[340px]">
   
         <img src={InterMiami.src} alt={InterMiami.alt} style={{ width: '60px' }} />
@@ -106,7 +108,7 @@ function Profile() {
         </div>
       </div>
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
-        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
+        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group G</div>
       <div className=" flex justify-between p-5 w-[340px]">
   
         <img src={InterMilan.src} alt={InterMilan.alt} style={{ width: '50px' }} />
@@ -116,7 +118,7 @@ function Profile() {
         </div>
       </div>
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
-        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group A</div>
+        <div className='p-2 border-y-2 font-bold border-yellow-300'>Group H</div>
       <div className=" flex justify-between p-5 w-[340px]">
       <img src={OsasunaFC.src} alt={OsasunaFC.alt} style={{ width: '50px' }} />
       <img src={NewcastleUnited.src} alt={NewcastleUnited.alt} style={{ width: '45px' }} />
