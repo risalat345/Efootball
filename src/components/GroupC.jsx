@@ -197,7 +197,7 @@ const GroupC = () => {
 </div>
      </div>
       <div className="mt-2 w-full max-w-3xl">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">Match Schedule</h2>
+        <h2 className="text-2xl font-bold text-center text-white mb-4">Match Schedule</h2>
         <ul className="space-y-4">
           {matches.map((match, index) => (
            <li

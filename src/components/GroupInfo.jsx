@@ -77,6 +77,7 @@ function Profile() {
         </div>
       </div>
       </NavLink>
+      <NavLink to="/groupd">
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group D</div>
       <div className=" flex justify-between p-5 w-[340px]">
@@ -87,6 +88,8 @@ function Profile() {
         <img src={GironaFC.src} alt={GironaFC.alt} style={{ width: '60px' }} />
         </div>
       </div>
+      </NavLink>
+      <NavLink to="/groupe">
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group E</div>
       <div className=" flex justify-between p-5 w-[340px]">
@@ -97,6 +100,8 @@ function Profile() {
         <img src={ACMilan.src} alt={ACMilan.alt} style={{ width: '45px' }} />
         </div>
       </div>
+      </NavLink>
+      <NavLink to="/groupf">
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group F</div>
       <div className=" flex justify-between p-5 w-[340px]">
@@ -107,6 +112,8 @@ function Profile() {
         <img src={BayerLeverkusen.src} alt={BayerLeverkusen.alt} style={{ width: '45px' }} />
         </div>
       </div>
+      </NavLink>
+      <NavLink to="/groupg">
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group G</div>
       <div className=" flex justify-between p-5 w-[340px]">
@@ -117,6 +124,8 @@ function Profile() {
         <img src={PSG.src} alt={PSG.alt} style={{ width: '50px' }} />
         </div>
       </div>
+      </NavLink>
+      <NavLink to="/grouph">
      <div className='h-[150px] w-[340px] border-2 border-yellow-300 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300'>
         <div className='p-2 border-y-2 font-bold border-yellow-300'>Group H</div>
       <div className=" flex justify-between p-5 w-[340px]">
@@ -128,6 +137,7 @@ function Profile() {
       
         </div>
       </div>
+      </NavLink>
      </div>
     </div>
   );

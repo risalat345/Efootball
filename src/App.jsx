@@ -5,6 +5,11 @@ import Profile from './components/Profile'
 import GroupA from './components/GroupA'
 import GroupB from './components/GroupB'
 import GroupC from './components/GroupC'
+import GroupD from './components/GroupD'
+import GroupE from './components/GroupE'
+import GroupF from './components/GroupF'
+import GroupG from './components/GroupG'
+import GroupH from './components/GroupH'
 function App() {
   const router = createBrowserRouter([
     {
@@ -44,32 +49,36 @@ function App() {
         <GroupC/>
       </>
     },
-    // {
-    //   path: "/home",
-    //   element: <>
-    //     <Navbar />
-    //     <Home />
-    //   </>
-    // },
-    // {
-    //   path: "/schedule",
-    //   element: <>
-    //     <Navbar />
-    //     <Schedule />
-    //   </>
-    // },
-    // {
-    //   path:"/pointtable",
-    //   element:<>
-    // <Navbar /><PointTable/>
-    // </>
-    // },
-    // {
-    //   path:"/report",
-    //   element:<>
-    // <Navbar /><Report/>
-    // </>
-    // },
+    {
+      path: "/groupd",
+      element: <>
+        <GroupD/>
+      </>
+    },
+    {
+      path: "/groupe",
+      element: <>
+        <GroupE/>
+      </>
+    },
+    {
+      path: "/groupf",
+      element: <>
+        <GroupF/>
+      </>
+    },
+    {
+      path: "/groupg",
+      element: <>
+        <GroupG/>
+      </>
+    },
+    {
+      path: "/grouph",
+      element: <>
+        <GroupH/>
+      </>
+    },
   ])
 
   return (
