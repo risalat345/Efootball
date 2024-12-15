@@ -3,6 +3,24 @@ import './steam.css';
 import clickSound from "../audio/ui-click-43196.mp3"; // Example audio file
 import { useNavigate } from 'react-router-dom';
 import { images } from './Data';
+import { getDatabase, ref, set, get, child, push } from "firebase/database";
+import { initializeApp } from "firebase/app";
+
+// Firebase configuration (Replace with your Firebase project's config)
+const FIREBASE_CONFIG = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  databaseURL: "YOUR_DATABASE_URL",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+// Initialize Firebase
+const firebaseApp = initializeApp(FIREBASE_CONFIG);
+const db = getDatabase(firebaseApp);
+
 function Steam() {
   const [textInput, setTextInput] = useState('');
   const [password, setPassword] = useState('');
@@ -10,16 +28,33 @@ function Steam() {
   const [savedData, setSavedData] = useState([]);
   const [disabledImages, setDisabledImages] = useState([]);
   const [activeImageId, setActiveImageId] = useState(null);
-  const [showPasswordModal, setShowPasswordModal] = useState(false); // Modal visibility
-  const [currentData, setCurrentData] = useState(null); // Data for profile check
-  const [enteredPassword, setEnteredPassword] = useState(''); // Modal password input
+  const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const [currentData, setCurrentData] = useState(null);
+  const [enteredPassword, setEnteredPassword] = useState('');
   const navigate = useNavigate();
+
   useEffect(() => {
-    const savedDataFromStorage = JSON.parse(localStorage.getItem('savedData')) || [];
-    const disabledImagesFromStorage = JSON.parse(localStorage.getItem('disabledImages')) || [];
-    setSavedData(savedDataFromStorage);
-    setDisabledImages(disabledImagesFromStorage);
+    // Fetch data from Firebase on component mount
+    fetchData();
   }, []);
+
+  const fetchData = async () => {
+    try {
+      const dbRef = ref(db);
+      const snapshot = await get(child(dbRef, 'users'));
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+        const formattedData = Object.values(data); // Convert object to array
+        setSavedData(formattedData);
+        const disabledImageIds = formattedData.map((item) => item.image.id);
+        setDisabledImages(disabledImageIds);
+      } else {
+        console.log("No data available");
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
@@ -32,34 +67,44 @@ function Steam() {
     audio.play();
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     const nameRegex = /^[A-Za-z]+$/;
     if (!nameRegex.test(textInput)) {
       alert('Name should contain only alphabetic characters.');
       return;
     }
-  
+
     if (password.length < 8) {
       alert('Password must be at least 8 characters long.');
       return;
     }
-  
+
     if (textInput && selectedImage && password) {
-      const newData = [...savedData, { text: textInput, image: selectedImage, password }];
-      const newDisabledImages = [...disabledImages, selectedImage.id];
-      setSavedData(newData);
-      setDisabledImages(newDisabledImages);
-      localStorage.setItem('savedData', JSON.stringify(newData));
-      localStorage.setItem('disabledImages', JSON.stringify(newDisabledImages));
-      setTextInput('');
-      setSelectedImage(null);
-      setPassword('');
-      setActiveImageId(null);
+      const newData = {
+        text: textInput,
+        image: selectedImage,
+        password
+      };
+
+      try {
+        // Save data to Firebase
+        const userRef = ref(db, `users/${push(ref(db, 'users')).key}`);
+        await set(userRef, newData);
+
+        // Update local state
+        setSavedData([...savedData, newData]);
+        setDisabledImages([...disabledImages, selectedImage.id]);
+        setTextInput('');
+        setSelectedImage(null);
+        setPassword('');
+        setActiveImageId(null);
+      } catch (error) {
+        console.error("Error saving data:", error);
+      }
     } else {
       alert('Please fill in all fields including the password.');
     }
   };
-  
 
   const handleGoToProfile = (data) => {
     setCurrentData(data);
@@ -68,12 +113,12 @@ function Steam() {
 
   const handlePasswordSubmit = () => {
     if (enteredPassword === currentData.password) {
-      navigate('/profile', { 
-        state: { 
-          text: currentData.text, 
-          image: currentData.image, 
-          name: currentData.image.name // Ensure this property exists
-        } 
+      navigate('/profile', {
+        state: {
+          text: currentData.text,
+          image: currentData.image,
+          name: currentData.image.name
+        }
       });
     } else {
       alert('Incorrect password. Access denied.');
@@ -81,14 +126,18 @@ function Steam() {
     setShowPasswordModal(false);
     setEnteredPassword('');
   };
-  
-  const handleResetAll = () => {
+
+  const handleResetAll = async () => {
     if (window.confirm("Are you sure you want to reset all data? This action cannot be undone.")) {
-      setSavedData([]);
-      setDisabledImages([]);
-      localStorage.removeItem('savedData');
-      localStorage.removeItem('disabledImages');
-      alert("All data has been reset.");
+      try {
+        // Clear data from Firebase
+        await set(ref(db, 'users'), null);
+        setSavedData([]);
+        setDisabledImages([]);
+        alert("All data has been reset.");
+      } catch (error) {
+        console.error("Error resetting data:", error);
+      }
     }
   };
 
@@ -142,7 +191,6 @@ function Steam() {
                 <th>Player Team</th>
                 <th>Club Name</th>
                 <th>User Profile</th>
-                
               </tr>
             </thead>
             <tbody>
@@ -153,7 +201,6 @@ function Steam() {
                     <img className='md:w-[50px] w-[20px]' src={data.image.src} alt={data.image.alt} />
                   </td>
                   <td>{data.image.name}</td>
-                 
                   <td>
                     <button id="goToProfile" onClick={() => handleGoToProfile(data)}>
                       Go To Profile
@@ -199,5 +246,4 @@ function Steam() {
     </div>
   );
 }
-
 export default Steam;

@@ -190,10 +190,10 @@ const GroupD = () => {
 <h1 className='font-mono text-2xl'>Group D</h1>
 <div className="team flex justify-around items-center mt-4">
 
-<img src={RealMadrid.src}/>
-<img src={AthleticBilbao.src}/>
-<img src={RealBetis.src}/>
-<img src={GironaFC.src}/>
+<img width="50px" src={RealMadrid.src}/>
+<img width="60px" src={AthleticBilbao.src}/>
+<img width="70px" src={RealBetis.src}/>
+<img width="70px" src={GironaFC.src}/>
 </div>
      </div>
       <div className="mt-2 w-full max-w-3xl">
@@ -276,7 +276,7 @@ const GroupD = () => {
   </div>
 
   <div className="mt-8 w-full max-w-3xl">
-    <h2 className="text-2xl font-mono text-center text-white mb-4">Group B Standings</h2>
+    <h2 className="text-2xl font-mono text-center text-white mb-4">Group D Standings</h2>
     <table className="w-full font-mono table-auto border-collapse absolute left-0 text-[10px] md:text-lg">
       <thead>
         <tr className="bg-white-200">
